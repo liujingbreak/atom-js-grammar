@@ -1,0 +1,21 @@
+{
+  "name": "atom-js-grammar",
+  "main": "./lib/atom-js-grammar",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "atom-js-grammar:toggle"
+  },
+  "repository": "https://github.com/atom/atom-js-grammar",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "esprima": "^2.7.2",
+    "estraverse": "^4.1.1",
+    "eventemitter3": "^1.1.1",
+    "lodash": "^4.2.1"
+  }
+}
