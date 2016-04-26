@@ -17,5 +17,8 @@
     "estraverse": "^4.1.1",
     "eventemitter3": "^1.1.1",
     "lodash": "^4.2.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
   }
 }
