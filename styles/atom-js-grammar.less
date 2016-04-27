@@ -5,8 +5,31 @@
 @import "ui-variables";
 
 .atom-js-grammar {
-	&:focus {
-		background-color: #6b15cc;
-		color: #f2f6f4;
+	.body {
+		max-height: 500px;
+		overflow: auto;
+		// &:focus {
+		// 	background-color: #6b15cc;
+		// 	color: #f2f6f4;
+		// }
+	}
+
+	.title {
+		font-size: 1.5em;
+		padding: 5px 0;
+	}
+
+	.indent {
+		margin-left: 1em;
+		padding: 6px;
+	}
+
+	.funcname {
+		cursor: pointer;
+		transition: all 0.3s ease-out;
+		&:hover {
+			background-color: #6b15cc;
+			color: #f2f6f4;
+		}
 	}
 }

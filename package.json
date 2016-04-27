@@ -3,6 +3,9 @@
   "main": "./lib/atom-js-grammar",
   "version": "0.0.0",
   "description": "A short description of your package",
+  "scripts": {
+	  "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
+  },
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "atom-js-grammar:toggle"
