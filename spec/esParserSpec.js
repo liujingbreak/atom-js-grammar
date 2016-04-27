@@ -10,11 +10,11 @@ describe('es-parser', function() {
 			child: [
 				{
 					name: '=>',
-					range: jasmine.any(Object),
+					loc: jasmine.anything(),
 					child: [
 						{
 							name: 'func1',
-							range: jasmine.any(Object)
+							loc: jasmine.anything()
 						}
 					]
 				}
@@ -29,7 +29,7 @@ describe('es-parser', function() {
 			child: [
 				{
 					name: 'b',
-					range: jasmine.any(Array)
+					loc: jasmine.anything()
 				}
 			]
 		});
@@ -37,12 +37,12 @@ describe('es-parser', function() {
 
 	it('can recoganise function in assignment expression', function() {
 		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-assignment.js')));
-		//console.log(result);
+		console.log(result);
 		expect(result).toEqual({
 			child: [
-				{name: 'abc.efg', range: jasmine.any(Array)},
-				{name: 'a.b.c.1', range: jasmine.any(Array)},
-				{name: 'efg', range: jasmine.any(Array)}
+				{name: 'abc.efg', loc: jasmine.anything()},
+				{name: 'a.b.c.1', loc: jasmine.anything()},
+				{name: 'efg', loc: jasmine.anything()}
 			]
 		});
 	});
@@ -54,17 +54,17 @@ describe('es-parser', function() {
 			child: [
 				{
 					name: 'func5',
-					range: jasmine.any(Array),
+					loc: jasmine.anything(),
 					child: [
 						{
 							name: 'func6',
-							range: jasmine.any(Array),
+							loc: jasmine.anything(),
 						},
 						{
 							name: '=>',
-							range: jasmine.any(Array),
+							loc: jasmine.anything(),
 							child: [
-								{name: 'func1', range: jasmine.any(Array)}
+								{name: 'func1', loc: jasmine.anything()}
 							]
 						}
 					]
@@ -75,10 +75,11 @@ describe('es-parser', function() {
 
 	it('can recoganise function as object property', function() {
 		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-property.js')));
+		//console.log(JSON.stringify(result, null, '\t'));
 		expect(result).toEqual({
 			child: [
-				{name: 'obj.propertyA.func2', range: jasmine.any(Array),
-					child: [{name: '', range: jasmine.any(Array)}]
+				{name: 'obj.propertyA.func2', loc: jasmine.anything(),
+					child: [{name: '', loc: jasmine.anything()}]
 				}
 			]
 		});
