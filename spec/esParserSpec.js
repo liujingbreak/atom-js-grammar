@@ -84,4 +84,18 @@ describe('es-parser', function() {
 			]
 		});
 	});
+
+	it('can work for comprehensive case', function() {
+		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-comprehensive.js')));
+		console.log(JSON.stringify(result, null, '  '));
+		expect(result).toEqual({
+			child: [
+				{
+					name: '.atom-js-grammar:toggle', loc: jasmine.anything()
+				}, {
+					name: '', loc: jasmine.anything()
+				}
+			]
+		});
+	});
 });

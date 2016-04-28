@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "scripts": {
-	  "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
+    "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
   },
   "keywords": [],
   "activationCommands": {
@@ -19,7 +19,8 @@
     "esprima": "^2.7.2",
     "estraverse": "^4.1.1",
     "eventemitter3": "^1.1.1",
-    "lodash": "^4.2.1"
+    "lodash": "^4.2.1",
+    "lru": "^2.0.1"
   },
   "devDependencies": {
     "jasmine": "^2.4.1"
