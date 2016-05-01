@@ -1,0 +1,7 @@
+<li ng-repeat="node in children" js-gramma-tree-container
+	ng-class="{'list-item': !node.hasVisibleChild, 'list-nested-item': node.hasVisibleChild}">
+	<div ng-if="node.hasVisibleChild" class="list-item" on-render="onChildRender(id)">
+		<span class="fname">{{ node.name | functionName }}</span>
+	</div>
+	<span ng-if="!node.hasVisibleChild" class="fname">{{ node.name | functionName }}</span>
+</li>

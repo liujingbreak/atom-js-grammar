@@ -42,7 +42,8 @@ describe('es-parser', function() {
 			child: [
 				{name: 'abc.efg', loc: jasmine.anything()},
 				{name: 'a.b.c.1', loc: jasmine.anything()},
-				{name: 'efg', loc: jasmine.anything()}
+				{name: 'efg', loc: jasmine.anything()},
+				{name: 'this.xxx', loc: jasmine.anything()}
 			]
 		});
 	});
