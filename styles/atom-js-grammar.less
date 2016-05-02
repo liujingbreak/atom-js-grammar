@@ -3,11 +3,18 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
+@js-grammar-highlight: #6b15cc;
 
 .atom-js-grammar {
-	.body {
-		max-height: 500px;
-		overflow: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	overflow: auto;
+	background-color: @app-background-color;
+
+	&.invisible {
+		display: none;
 	}
 
 	.title {
@@ -22,11 +29,13 @@
 
 	.list-item {
 		cursor: pointer;
-		transition: all 0.3s ease-out;
+		border-left: 0 solid @js-grammar-highlight;
+		transition: border-left 0.3s ease-out;
 		font-size: 1.2em;
 		&:hover {
-			background-color: #6b15cc;
-			color: #f2f6f4;
+			border-left: 5px solid @js-grammar-highlight;
+			background-color: @background-color-selected;
+			color: @text-color-selected;
 		}
 	}
 
