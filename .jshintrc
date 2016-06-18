@@ -2,7 +2,7 @@
     "maxerr"        : 50,
     "bitwise"       : false,
     "camelcase"     : false,
-    "curly"         : true,
+    "curly"         : false,
     "eqeqeq"        : true,
     "forin"         : true,
 	"freeze"        : true,

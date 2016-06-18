@@ -12,8 +12,8 @@ describe('AtomJsGrammar', function() {
       workspaceElement = atom.views.getView(atom.workspace);
       return activationPromise = atom.packages.activatePackage('atom-js-grammar');
     });
-    describe('when the atom-js-grammar:toggle event is triggered', function() {
-      xit('hides and shows the modal panel', function() {
+    xdescribe('when the atom-js-grammar:toggle event is triggered', function() {
+      it('hides and shows the modal panel', function() {
         expect(workspaceElement.querySelector('.atom-js-grammar')).not.toExist();
         atom.commands.dispatch(workspaceElement, 'atom-js-grammar:toggle');
         waitsForPromise(function() {
@@ -30,7 +30,7 @@ describe('AtomJsGrammar', function() {
           return expect(atomJsGrammarPanel.isVisible()).toBe(false);
         });
       });
-      xit('hides and shows the view', function() {
+      it('hides and shows the view', function() {
         jasmine.attachToDOM(workspaceElement);
         expect(workspaceElement.querySelector('.atom-js-grammar')).not.toExist();
         atom.commands.dispatch(workspaceElement, 'atom-js-grammar:toggle');
