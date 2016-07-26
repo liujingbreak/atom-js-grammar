@@ -5,10 +5,10 @@ Helps you to navigate a file structure based on *function* definition and jump t
 ### Default key to popup viewer
 ctrl + f12 or cmd + f12
 
-![](preview.png)
+![](https://github.com/liujingbreak/atom-js-grammar/raw/master/preview.png)
 
 Excellent viewer for test spec-like file structure.
-![](preview2.jpg)
+![](https://github.com/liujingbreak/atom-js-grammar/raw/master/preview2.jpg)
 
 ### Supported grammar structure
 This plugin uses Esprima to parse JS grammar structure, so it should support parsing all versions of ECMAScript.
