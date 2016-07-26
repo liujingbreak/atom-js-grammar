@@ -1,16 +1,16 @@
 {
-  "name": "atom-js-grammar",
+  "name": "js-func-viewer",
   "main": "./lib/atom-js-grammar",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "1.0.0",
+  "description": "A function structure viewer for Javascript file",
   "scripts": {
     "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
   },
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-js-grammar:toggle"
+    "atom-workspace": "js-func-viewer:toggle"
   },
-  "repository": "https://github.com/atom/atom-js-grammar",
+  "repository": "https://github.com/liujingbreak/atom-js-grammar",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -8,4 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
-  'cmd-f12': 'atom-js-grammar:toggle'
+  'cmd-f12': 'js-func-viewer:toggle'
+  'ctrl-f12': 'js-func-viewer:toggle'

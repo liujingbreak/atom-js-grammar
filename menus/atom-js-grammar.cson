@@ -2,19 +2,19 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle atom-js-grammar'
-      'command': 'atom-js-grammar:toggle'
+      'label': 'Toggle JS function viewer'
+      'command': 'JS function viewer:toggle'
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'atom-js-grammar'
+      'label': 'JS function viewer'
       'submenu': [
         {
           'label': 'Toggle'
-          'command': 'atom-js-grammar:toggle'
+          'command': 'js-func-viewer:toggle'
         }
       ]
     ]
