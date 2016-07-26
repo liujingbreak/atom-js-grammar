@@ -5,6 +5,9 @@ Helps you to navigate a file structure based on *function* definition and jump t
 ### Default key to popup viewer
 ctrl + f12 or cmd + f12
 
+Click anywhere outside the popup viewer to hide, or
+press ESC to hide.
+
 ![](https://github.com/liujingbreak/atom-js-grammar/raw/master/preview.png)
 
 Excellent viewer for test spec-like file structure.
