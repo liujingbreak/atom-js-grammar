@@ -142,4 +142,16 @@ describe('es-parser', function() {
 			]
 		});
 	});
+
+	it('can work for array of function case', function() {
+		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/array-function.js')));
+		//console.log(JSON.stringify(result, null, '  '));
+		expect(result).toEqual({
+			child: [
+				{name: 'a', longName: 'a', loc: jasmine.anything()},
+				{name: 'b', longName: 'b', loc: jasmine.anything()},
+				{name: '=>', longName: '=>', loc: jasmine.anything()},
+			]
+		});
+	});
 });
