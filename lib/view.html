@@ -1,5 +1,5 @@
-<div tabIndex="0" ng-controller="MainController as mainVm" on-render="mainVm.onRender()">
+<atom-panel tabIndex="0" ng-controller="MainController as mainVm" on-render="mainVm.onRender()">
 	<div class="title">{{mainVm.title}}</div>
 	<ul js-gramma-tree on-select-node="mainVm.jumpTo(line, column, start)" tree="mainVm.tree" class="has-collapsable-children body">
 	</ul>
-</div>
+</atom-panel>

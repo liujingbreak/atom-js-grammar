@@ -2,8 +2,7 @@
 
 Helps you to navigate a file structure based on *function* definition and jump to the line.
 
-### Default key to popup viewer
-ctrl + f12 or cmd + f12
+It has more structural view than what `cmd + R` has.
 
 Click anywhere outside the popup viewer to hide, or
 press ESC to hide.
