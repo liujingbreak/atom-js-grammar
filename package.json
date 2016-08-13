@@ -1,7 +1,7 @@
 {
   "name": "js-func-viewer",
   "main": "./lib/atom-js-grammar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A function structure viewer for Javascript file",
   "scripts": {
     "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
