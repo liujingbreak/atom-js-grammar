@@ -13,9 +13,10 @@ Excellent viewer for test spec-like file structure.
 ![](https://github.com/liujingbreak/atom-js-grammar/raw/master/preview2.jpg)
 
 ### Supported grammar structure
-This plugin uses Esprima to parse JS grammar structure, so it should support parsing all versions of ECMAScript.
+This plugin uses `acorn-jsx` to parse JS grammar structure, so it should support parsing all versions of ECMAScript and JSX script.
 
 #### What will be shown in popup list
+- Class decalaration node which has any member function
 - Function type node
 - Arrow function node
 - Nested function type node

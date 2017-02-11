@@ -3,15 +3,53 @@ var fs = require('fs');
 var Path = require('path');
 
 describe('es-parser', function() {
+	it('can recoganise JSX structure', ()=> {
+		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-jsx.js')));
+		expect(result).toEqual({
+			child: [{
+				longName: 'xxx',
+				name: 'xxx',
+				loc: jasmine.anything(),
+			}
+		]});
+	});
+
+	it('can recoganise ES6 class structure', () => {
+		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-es6-class.js')));
+		expect(result).toEqual({
+			child: [
+				{
+					longName: 'class SampleES6',
+					name: 'class SampleES6',
+					loc: jasmine.anything(),
+					child: [
+						{
+							name: 'constructor', longName: 'constructor', loc: jasmine.anything()
+						},
+						{
+							name: 'mothodA', longName: 'mothodA', loc: jasmine.anything()
+						},
+						{
+							name: 'methodB', longName: 'methodB', loc: jasmine.anything()
+						}
+					]
+				},
+				{
+					name: 'funcC', longName: 'funcC', loc: jasmine.anything()
+				}
+			]
+		});
+	});
+
 	it('can recoganise test spec like function structure', ()=> {
 		var result = parse(fs.readFileSync(Path.resolve(__dirname, 'samples/sample-spec-like.js')));
 		//console.log(JSON.stringify(result, null, '\t'));
 		expect(result).toEqual({
 			child: [{
-					"name": "describe('test1')", "longName": "describe('test1')",
+					name: 'describe(\'test1\')', longName: 'describe(\'test1\')',
 					loc: jasmine.anything()
 				}, {
-					"name": "describe('test2')", "longName": "describe('test2')",
+					name: 'describe(\'test2\')', longName: 'describe(\'test2\')',
 					loc: jasmine.anything()
 				}, {
 					name: 'ok.on(\'click\')', longName: 'ok.on(\'click\')',
