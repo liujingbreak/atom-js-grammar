@@ -4,8 +4,10 @@ Helps you to navigate a file structure based on *function* definition and jump t
 
 It has more structural view than what `cmd + R` has.
 
-Click anywhere outside the popup viewer to hide, or
-press ESC to hide.
+## Usage:
+1. Focus on editor area
+
+2. Press cmd-F12 or ctrl-F12 to toggle visibility, also press cmd-F12, ctrl-F12 or ESC to hide.
 
 ![](https://github.com/liujingbreak/atom-js-grammar/raw/master/preview.png)
 
