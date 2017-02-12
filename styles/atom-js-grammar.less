@@ -8,12 +8,12 @@
 @atom-editor-tab-height: 36px;
 
 .atom-js-grammar {
-	max-width: 50%;
+	max-width: 30%;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	height: calc(~"100% - @{atom-editor-tab-height}");
-	overflow: auto;
+	overflow: hidden;
 	background-color: @app-background-color;
 	padding: 0 @js-grammar-padding-unit;
 
@@ -21,9 +21,15 @@
 		display: none;
 	}
 
+	atom-panel {
+		overflow: auto;
+		max-height: 100%;
+	}
+
 	.title {
 		font-size: 1.5em;
 		padding: 5px 0;
+		white-space: nowrap;
 	}
 
 	.indent {
@@ -42,6 +48,12 @@
 			background-color: @background-color-selected;
 			//color: @text-color-selected;
 		}
+	}
+
+	.close-button {
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 
 	.list-nested-item {

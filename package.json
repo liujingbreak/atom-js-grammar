@@ -1,12 +1,12 @@
 {
   "name": "js-func-viewer",
   "main": "./lib/atom-js-grammar",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A function structure viewer for Javascript file",
   "scripts": {
     "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
   },
-  "keywords": [],
+  "keywords": ["acorn", "ecmascript"],
   "activationCommands": {
     "atom-workspace": "js-func-viewer:toggle"
   },
@@ -16,11 +16,11 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "esprima": "^2.7.2",
+    "acorn": "^4.0.11",
+    "acorn-jsx": "^3.0.1",
     "estraverse": "^4.1.1",
-    "eventemitter3": "^1.1.1",
-    "lodash": "^4.2.1",
-    "lru": "^2.0.1"
+    "estraverse-fb": "^1.3.1",
+    "lodash": "^4.2.1"
   },
   "devDependencies": {
     "jasmine": "^2.4.1"
