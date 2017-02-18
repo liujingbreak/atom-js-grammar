@@ -1,7 +1,7 @@
 {
   "name": "js-func-viewer",
   "main": "./lib/atom-js-grammar",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A function structure viewer for Javascript file",
   "scripts": {
     "test": "node_modules/.bin/jasmine spec/esParserSpec.js"
@@ -19,6 +19,7 @@
     "acorn": "^4.0.11",
     "acorn-jsx": "^3.0.1",
     "estraverse-fb": "^1.3.1",
+    "estraverse": "^4.2.0",
     "lodash": "^4.2.1"
   },
   "devDependencies": {
